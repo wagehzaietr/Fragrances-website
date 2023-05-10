@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, useState } from "react";
+import React, { lazy, useEffect, useState, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Home, NavBar, Footer } from "./Componets";
@@ -33,16 +33,19 @@ const App = () => {
     };
   });
 
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <NavBar />
       {show && <BackToTop />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <Suspense
+        fallback={<div className="text-white text-center">Loading...</div>}
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </ThemeProvider>
   );
