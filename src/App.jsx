@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Home, NavBar, Footer } from "./Componets";
 import BackToTop from "./Componets/BackToTop";
-import Loading from "./Componets/Loading";
 import GlobalStyle from "./Styles/GlobalStyles.js";
 import Cart from "./Pages/Cart";
 
@@ -18,7 +17,6 @@ const theme = {
 
 const App = () => {
   const [show, setShow] = useState(false);
-  const [loading, setLoading] = useState(true);
   const handleScroll = () => {
     if (window.scrollY > 0.3 * window.innerHeight) {
       setShow(true);
@@ -35,17 +33,11 @@ const App = () => {
     };
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  });
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <NavBar />
-      {loading && <Loading />}
       {show && <BackToTop />}
       <Routes>
         <Route path="/" element={<Home />} />
