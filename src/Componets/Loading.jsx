@@ -1,5 +1,5 @@
 import React from "react";
-import { Bars, } from "react-loader-spinner";
+import { Bars } from "react-loader-spinner";
 import styled from "styled-components";
 
 const Loading = () => {

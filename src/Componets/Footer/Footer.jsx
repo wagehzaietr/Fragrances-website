@@ -211,7 +211,7 @@ const FooterWrapper = styled.div`
       justify-content: center;
 
       img {
-        margin-right: 10rem;
+        margin-right: 4rem;
       }
 
       @media screen and (max-width: 768px) {

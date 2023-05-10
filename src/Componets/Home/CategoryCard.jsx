@@ -50,6 +50,7 @@ const CardWrapper = styled.div`
     background-color: #0f0f0f;
     border-radius: 10px;
     padding: 1.3rem;
+    margin-left: 1rem;
 
     @media screen and (max-width: 768px) {
       width: 240px;

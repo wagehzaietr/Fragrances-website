@@ -18,7 +18,7 @@ const theme = {
 
 const App = () => {
   const [show, setShow] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const handleScroll = () => {
     if (window.scrollY > 0.3 * window.innerHeight) {
       setShow(true);

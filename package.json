@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@syncfusion/ej2-react-popups": "^21.1.41",
     "framer-motion": "^10.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -19,11 +18,11 @@
     "react-lazy-load-image-component": "^1.5.6",
     "react-router-dom": "^6.11.0",
     "react-slick": "^0.29.0",
+    "react-spinners": "^0.13.8",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
