@@ -179,7 +179,7 @@ const Icons = styled.nav`
     z-index: 999;
     @media screen and (max-width: 768px) {
       display: block;
-      left: -15.7rem;
+      left: -16.4rem;
       position: absolute;
     }
   }

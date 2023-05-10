@@ -218,7 +218,7 @@ const FooterWrapper = styled.div`
         display: block;
 
         img {
-          margin-left: 2.4rem;
+          margin: 0 auto;
         }
       }
 
@@ -433,7 +433,7 @@ const FooterContainer = styled.div`
         cursor: pointer;
         @media screen and (max-width: 768px) {
           top: -25px;
-          left: 6.2rem;
+          left: 6.7rem;
         }
       }
       &:hover::before {

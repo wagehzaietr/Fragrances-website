@@ -14,7 +14,7 @@ const about = () => {
       <WrapperAbout>
         <motion.div
           className="about-images"
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
           viewport={{ once: true }}
