@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import {  Routes, Route } from "react-router-dom";
+import React, { lazy, useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Home, NavBar, Footer } from "./Componets";
 import BackToTop from "./Componets/BackToTop";
 import GlobalStyle from "./Styles/GlobalStyles.js";
-import Cart from "./Pages/Cart";
+const Cart = lazy(() => import("./Pages/Cart"));
 
 const theme = {
   colors: {
