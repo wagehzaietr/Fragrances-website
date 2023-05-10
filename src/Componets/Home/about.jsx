@@ -14,18 +14,22 @@ const about = () => {
       <WrapperAbout>
         <motion.div
           className="about-images"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0, }}
-          transition={{ duration: 1, type: "spring", stiffness: 100 }}
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
           viewport={{ once: true }}
         >
-          <MemoizedBorderStyle image1={leftcmsbanner1} image2={leftcmsbanner2} />
+          <MemoizedBorderStyle
+            image1={leftcmsbanner1}
+            image2={leftcmsbanner2}
+          />
         </motion.div>
         <div className="about-info">
           <motion.h1
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, type: "spring", stiffness: 100 }}
+            viewport={{ once: true }}
           >
             Our Little Story
           </motion.h1>
@@ -33,7 +37,8 @@ const about = () => {
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.9, type: "spring", stiffness: 100 }}
+            viewport={{ once: true }}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
             ratione placeat accusantium eum magnam animi enim, hic facere modi
@@ -42,9 +47,15 @@ const about = () => {
             {readmore &&
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ipsam ut ullam aspernatur placeat a consectetur exercitationem illo nesciunt tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequ"}
           </motion.p>
-          <button className="btn" onClick={() => setReadmore(!readmore)}>
+          <motion.button
+            className="btn"
+            onClick={() => setReadmore(!readmore)}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{ duration: 0.3, }}
+          >
             read more
-          </button>
+          </motion.button>
           <motion.div className="sign">
             <img src={sign} alt="" />
           </motion.div>
@@ -60,7 +71,7 @@ export const SectionAbout = styled.div`
   background-color: #0f0f0f;
 `;
 
- export const WrapperAbout = styled.div`
+export const WrapperAbout = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +186,7 @@ export const SectionAbout = styled.div`
     margin-bottom: 40px;
     letter-spacing: 0.7px;
     @media screen and (max-width: 768px) {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 

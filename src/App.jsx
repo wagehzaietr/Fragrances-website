@@ -17,21 +17,35 @@ const theme = {
 
 const App = () => {
   const [show, setShow] = useState(false);
-  const handleScroll = () => {
-    if (window.scrollY > 0.3 * window.innerHeight) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  };
 
   useEffect(() => {
+    function handleScroll() {
+      const windowHeight = window.innerHeight;
+      const body = document.body;
+      const html = document.documentElement;
+      const documentHeight = Math.max(
+        body.scrollHeight,
+        body.offsetHeight,
+        html.clientHeight,
+        html.scrollHeight,
+        html.offsetHeight
+      );
+      
+      if (window.scrollY > documentHeight - 1.3 * windowHeight) {
+        setShow(false);
+      } else if (window.scrollY > 0.3 * windowHeight) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    }
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
-const BorderStyle = ({image1,image2,hasAnimated}) => {
+const BorderStyle = ({ image1, image2, hasAnimated }) => {
   return (
     <div>
       <div className="neon-border">
@@ -10,10 +9,8 @@ const BorderStyle = ({image1,image2,hasAnimated}) => {
           src={image1}
           alt="border-image"
           className="image1"
-          whileHover={{ x: 20 }}
+          whileHover={{ x: -20 }}
           transition={{ duration: 0.6 }}
-          initial={{ x: -20 }}
-          whileInView={{ x: 0 }}
         />
         <motion.img
           src={image2}
@@ -21,8 +18,6 @@ const BorderStyle = ({image1,image2,hasAnimated}) => {
           className="image2"
           whileHover={{ x: 20 }}
           transition={{ duration: 0.6 }}
-          initial={{ x: -20 }}
-          whileInView={{ x: 0 }}
         />
       </div>
     </div>
@@ -30,7 +25,5 @@ const BorderStyle = ({image1,image2,hasAnimated}) => {
 };
 
 //styles
-
-
 
 export default BorderStyle;

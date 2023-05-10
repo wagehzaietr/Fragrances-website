@@ -101,6 +101,9 @@ const ModalWrapper = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @media screen and (max-width: 768px) {
+      border-radius: 15px;
+    }
   }
 
   .close {
@@ -138,12 +141,17 @@ const Container = styled.div`
     flex: 1;
     background-color: #0f0f0f;
     padding: 2rem;
+    @media screen and (max-width: 768px) {
+        padding-top: 1rem;
+        margin-top: 1.9rem;
+        background-color: transparent;
+      }
+
     img {
       width: 100%;
       object-fit: contain;
 
       @media screen and (max-width: 768px) {
-        transform: scale(1.2);
       }
     }
   }

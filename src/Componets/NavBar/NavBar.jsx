@@ -62,7 +62,7 @@ const NavBar = () => {
         <Mobilewrapper
           initial={{ opacity: 0, height: 0 }}
           animate={
-            show ? { opacity: 1, height: "19%" } : { opacity: 0, height: 0 }
+            show ? { opacity: 1, height: "20%" } : { opacity: 0, height: 0 }
           }
           exit={{ opacity: 0, height: 0 }}
           transition={{ type: "spring", stiffness: 80 }}
@@ -103,9 +103,10 @@ const Mobilewrapper = styled(motion.ul)`
   left: 0;
   z-index: 999;
   width: 100%;
+  backdrop-filter: blur(7px);
   cursor: pointer;
 
-  background-color: #262626;
+  background-color: #262626d1;
 
   li {
     margin-top: 0.6rem;
@@ -178,7 +179,7 @@ const Icons = styled.nav`
     z-index: 999;
     @media screen and (max-width: 768px) {
       display: block;
-      left: -15.5rem;
+      left: -15.7rem;
       position: absolute;
     }
   }

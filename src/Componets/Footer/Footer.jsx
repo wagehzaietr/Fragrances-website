@@ -218,7 +218,7 @@ const FooterWrapper = styled.div`
         display: block;
 
         img {
-          margin-left: 2rem;
+          margin-left: 2.4rem;
         }
       }
 

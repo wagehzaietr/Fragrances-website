@@ -39,6 +39,10 @@ const SliderBrand = styled(Slider)`
   }
   .slick-list {
     margin-left: 6rem;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 6.3rem;
+    }
   }
   .slick-track {
   }
